@@ -2,6 +2,7 @@ const rates = {};
 const elementUSD = document.querySelector('[data-value="USD"]');
 const elementEUR = document.querySelector('[data-value="EUR"]');
 const elementUAH = document.querySelector('[data-value="UAH"]');
+const elementPLN = document.querySelector('[data-value="PLN"]');
 
 const input = document.getElementById('input');
 const result = document.getElementById('result')
@@ -19,10 +20,12 @@ async function getCurrencies() {
 	rates.USD = result.Valute.USD;
 	rates.EUR = result.Valute.EUR;
 	rates.UAH = result.Valute.UAH;
+	rates.PLN = result.Valute.PLN;
 
 	elementUSD.textContent = rates.USD.Value.toFixed(2);
 	elementEUR.textContent = rates.EUR.Value.toFixed(2);
 	elementUAH.textContent = rates.UAH.Value.toFixed(2);
+	elementPLN.textContent = rates.PLN.Value.toFixed(2);
 }
 
 function conValue() {
