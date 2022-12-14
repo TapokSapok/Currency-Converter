@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Конвертер валют</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="title">
+         <div class="panelTitle">Конвертер валют</div>
+      </div>
+
+      <div class="panel">
+         <div class="panelConverter">
+            <div class="infoTitle">
+               <div class="send">
+                  <h2 class="panelHelpTitle">Отдать</h2>
+               </div>
+               <div class="get">
+                  <h2 class="panelHelpTitle">Получить</h2>
+               </div>
+            </div>
+            <div class="panelConverterItem">
+               <select name="select_1" id="select_1">
+                  <option value="RUB">RUB -- Рубли</option>
+                  <option value="USD">USD -- Доллары США</option>
+                  <option value="EUR">EUR -- Евро</option>
+                  <option value="UAH">UAH -- Гривен Украинский</option>
+               </select>
+               <div class="input">
+                  <input type="number" class="inputItem" id="input">
+               </div>
+            </div>
+            <div class="panelCenter">
+               <h1 class="panelCenterArrow">--></h1>
+            </div>
+            <div class="panelConverterItem">
+               <select name="select_2" id="select_2">
+                  <option value="USD">USD -- Доллары США</option>
+                  <option value="RUB">RUB -- Рубли</option>
+                  <option value="EUR">EUR -- Евро</option>
+                  <option value="UAH">UAH -- Гривен Украинский</option>
+               </select>
+               <div class="input">
+                  <input type="number" class="inputItem" id="result">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="ratesPanel">
+         <div class="ratesPanelItem">
+            <h1 class="ratesPanelTitle">
+               USD
+            </h1>
+            <h2 class="ratesPanelText" data-value="USD">
+               --.--
+            </h2>
+         </div>
+         <div class="ratesPanelItem">
+            <h1 class="ratesPanelTitle">
+               EUR
+            </h1>
+            <h2 class="ratesPanelText" data-value="EUR">
+               --.--
+            </h2>
+         </div>
+         <div class="ratesPanelItem">
+            <h1 class="ratesPanelTitle">
+               UAH
+            </h1>
+            <h2 class="ratesPanelText" data-value="UAH">
+               --.--
+            </h2>
+         </div>
+      </div>
+   </div>
+   <!-- <div class="panelPrice">
+         <div class="panelPriceItem"></div>
+         <div class="panelPriceItem"></div>
+      </div> -->
+
+   <script src="app.js"></script>
+</body>
+
+</html>
