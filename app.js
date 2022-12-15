@@ -30,28 +30,31 @@ async function getCurrencies() {
 }
 
 function conValue() {
-	if (select1.value == 'RUB') {
-		result.value = (parseFloat(input.value) / rates[select2.value].Value).toFixed(2);
+	if (select1.value == select2.value) {
+		result.value = input.value;
 	} if (select2.value == 'RUB') {
 		result.value = (parseFloat(input.value) * rates[select1.value].Value).toFixed(2);
+	} if (select1.value == 'RUB') {
+		result.value = (parseFloat(input.value) / rates[select2.value].Value).toFixed(2);
 	} else {
 		result.value = (parseFloat(input.value) * rates[select1.value].Value / rates[select2.value].Value).toFixed(2);
 	}
 };
 
 input.oninput = function change() {
-	conValue()
+	conValue();
 };
 
 select1.oninput = function change() {
-	conValue()
+	conValue();
 };
 
 select2.oninput = function change() {
-	conValue()
+	conValue();
 };
 
-console.log(select1.value)
+
+
 
 
 // function conValue() {
@@ -59,3 +62,5 @@ console.log(select1.value)
 // 		result.value = (parseFloat(input.value) * rates[select1.value].Value).toFixed(2);
 // 	}
 // }
+
+
