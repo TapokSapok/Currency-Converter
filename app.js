@@ -21,6 +21,7 @@ async function getCurrencies() {
 	rates.EUR = result.Valute.EUR;
 	rates.UAH = result.Valute.UAH;
 	rates.PLN = result.Valute.PLN;
+	rates.RUB = result.Valute.RUB;
 
 	elementUSD.textContent = rates.USD.Value.toFixed(2);
 	elementEUR.textContent = rates.EUR.Value.toFixed(2);
@@ -29,7 +30,13 @@ async function getCurrencies() {
 }
 
 function conValue() {
-	result.value = (parseFloat(input.value) / rates[select2.value].Value).toFixed(2);
+	if (select1.value == 'RUB') {
+		result.value = (parseFloat(input.value) / rates[select2.value].Value).toFixed(2);
+	} if (select2.value == 'RUB') {
+		result.value = (parseFloat(input.value) * rates[select1.value].Value).toFixed(2);
+	} else {
+		result.value = (parseFloat(input.value) * rates[select1.value].Value / rates[select2.value].Value).toFixed(2);
+	}
 };
 
 input.oninput = function change() {
@@ -43,6 +50,8 @@ select1.oninput = function change() {
 select2.oninput = function change() {
 	conValue()
 };
+
+console.log(select1.value)
 
 
 // function conValue() {
